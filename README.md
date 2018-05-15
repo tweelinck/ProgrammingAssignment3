@@ -1,6 +1,6 @@
 # README file for the analysis script
 
-##Contents of this data set
+## Contents of this data set
 
 This data set includes the following
 
@@ -12,7 +12,7 @@ This data set includes the following
 
         write.table(tidy_data, file = 'tidy_data.txt', row.names = False)
 
-##The raw data set
+## The raw data set
 
 The raw data set is the data set taken from
 
@@ -36,7 +36,7 @@ For the context of the experiment of the raw data-set we quote, verbatim, the re
 > The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain. See 'features_info.txt' for more details. 
 Please note that the files we use from the raw data set are thus already processed data by Anguita et al. We do not use the signal data sets also provided in the raw data set.
 
-##How does the script work
+## How does the script work
 
 The script contained in the 'run_analysis.R' file executes an analysis of the data set consisting of the following steps:
 
@@ -46,7 +46,7 @@ The script contained in the 'run_analysis.R' file executes an analysis of the da
 4. Renaming the measurement variables with descriptive text names.
 5. Generate a tidy data set with the averages for the measurement variables based on the subject and activity groups.
 
-##The tidy data set
+## The tidy data set
 The tidy data set consists of 180 observations over 68 variables. The first two variables are 'Subject' and 'Activity', whereas the other 66 variables are computed averages of measurements (see the CodeBook for more info on the measurements). Note that the data set is tidy as each row corresponds to an observation and each column corresponds to a measurement and has a descriptive name. Thus this is a tidy data set in the so-called `wide tidy data' format. One can read the data into R using 
 
     read.table('tidy_data.txt', header = TRUE)
